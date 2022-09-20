@@ -1,0 +1,72 @@
+#navbar{
+    flex-direction: column; /*the navbar problem is sloved*/
+}
+#navbar li a{
+    font-size: 1rem;
+    padding:0px 0px;
+}
+#navbar li{
+    
+    margin:0px 5px;
+}
+#navbar ul{
+    padding-bottom: 5px;
+}
+
+#logo img{
+    height: 50px;
+    width: 50px;
+}
+.btn{
+    margin-top: 10px;
+}
+
+.home{
+    height:280px;/*for the backgroug img*/
+}
+.home::before{
+    height:100%;
+    width: 100%;
+}
+.home p{
+    font-size: 1rem;
+}
+
+#services{
+    flex-direction: column;  /*1*/
+    overflow: hidden;
+}
+
+#services .box img {
+    display: block;
+    height: 75px;
+    margin: auto;
+}
+
+#clients{
+     /* overflow: hidden;  Now overflow in images is coming ans white space is appering */
+     flex-wrap: wrap;
+
+}
+#clients div img{
+    height:50px;
+    width: 50px;
+}
+
+/* .contact{
+
+}
+
+#contact-box{
+
+}
+
+footer{
+
+} */
+
+.h-primary{
+    
+    font-size: 1.4rem;
+    padding:2px;
+}

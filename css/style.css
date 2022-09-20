@@ -1,0 +1,221 @@
+/* CSS reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navbar decoration */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative; /*once see why*/
+    top: 0px;
+    left: 0px;
+}
+
+/* Navbar decoration: logo  */
+#logo{
+    margin: 9px 5px;
+}
+#logo img{
+    height: 67px;
+    width: 72px;
+    /* margin:2px 3px; */
+}
+/* Navbar decoration: items */
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0px;
+    left:0px;
+    height: 100%;
+    width: 100%;  
+    z-index: -1;
+    opacity: 0.7;
+}
+#navbar li{
+    list-style-type: none;
+    font-size: 1.1rem;
+    margin:0px 12px;
+}
+
+#navbar li a{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+     display: block; /*what done this do */
+    text-decoration: none;
+    padding:0px 23px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+   
+}
+
+#navbar li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home section */
+.home{
+    display: flex;
+    flex-direction: column;
+    padding:13px ;
+    height: 349px;
+    justify-content: center;
+    align-items: center;
+    position: relative;/*it takes that much space it wants so that if we put backgroud image that also take this much space only*/
+}
+.home::before{
+    content: "";  /*important*/
+    position: absolute;  /*impaortant*/
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    top:0px;
+    left:0px; 
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.59;
+}
+
+.h-primary{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3.3rem;
+    /* text-align: center; */
+    padding: 11px;
+}
+
+.h-secondary{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.3rem;
+    /* text-align: center; */
+    padding: 21px;
+}
+.center{
+    text-align: center;
+}
+.home p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    padding: 4px;
+}
+
+.btn{
+    padding: 3px 20px;
+    border: 2px solid black;
+    margin: 12px 5px;
+    font-size: 1.2rem;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+/* service container */
+.service-container{
+    margin:11px 0px;
+}
+#services{
+    display: flex;
+    margin: 1px;
+}
+#services .box{
+    font-family: 'Ubuntu', sans-serif;
+    border: 2px solid red;
+    margin: 13px;
+    padding: 11px;
+    border-radius: 10px;
+}
+#services .box img{
+    display: block;
+    height: 197px;
+    margin: auto;
+}
+#services .box p{
+    text-align: center;
+}
+
+/* clients */
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-container{
+    position: relative;
+    height: 344px;
+}
+.client-container::before{
+    content: "";
+    background: url("../bg\ 2.jpg") no-repeat center center/cover;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.8;
+}
+#clients div img{
+    display: block;
+    height:100px;
+    width:100px;
+    padding: 11px 31px;
+    margin: 0px 52px;
+   
+}
+
+/* once see how to make it work */
+/* .clients-item-1{
+    margin:0px;
+    padding:0px
+} */
+
+/* contact section */
+.contact{
+    display: block;
+    position: relative;
+    height: 400px;
+    margin: 30px 0px;
+}
+.contact::before{
+    content: "";
+    background: url("../Contact-Us.jpg") no-repeat center center/cover;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    opacity:0.8;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-box input,.contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px
+}
+
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+#contact-box textarea{
+    width:100%;
+    border-radius: 10px;
+    border:2px solid black;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4px 0px;
+}
