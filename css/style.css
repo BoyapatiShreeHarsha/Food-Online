@@ -47,7 +47,6 @@
 #navbar li a{
     font-family: 'Roboto', sans-serif;
     color: white;
-     display: block; /*what done this do */
     text-decoration: none;
     padding:0px 23px;
     /* border: 2px solid red; */
@@ -85,7 +84,6 @@
 .h-primary{
     font-family: 'Ubuntu', sans-serif;
     font-size: 3.3rem;
-    /* text-align: center; */
     padding: 11px;
 }
 
@@ -145,6 +143,7 @@
 }
 .client-container{
     position: relative;
+    /* we do this so that the background-image does not leak */
     height: 344px;
 }
 .client-container::before{
@@ -153,6 +152,8 @@
     position: absolute;
     width:100%;
     height:100%;
+    top: 0px;
+    left: 0px;
     z-index:-1;
     opacity:0.8;
 }
@@ -165,13 +166,6 @@
    
 }
 
-/* once see how to make it work */
-/* .clients-item-1{
-    margin:0px;
-    padding:0px
-} */
-
-/* contact section */
 .contact{
     display: block;
     position: relative;
